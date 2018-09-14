@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
+h1 {
+    font-family: sans-serif;
+    position: absolute;
+    top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #8fd2fe;
+    min-height: 350px;
+}
+
+@keyframes anim-wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.wave, .wave-2 {
+    position: absolute;
+    height: 3000px;
+    width: 3000px;
+    bottom: -2900px;
+    background: #28a9ff;
+    opacity: .5;
+    border-radius: 40%;
+    animation: anim-wave 10s infinite;
+    z-index: 2;
+}
+
+.wave-2 {
+    background: #007dd1;
+    opacity: .2;
+    height: 3050px;
+    width: 3500px;
+    bottom: -3200px;
+}
+
+@keyframes anim-bubbles {
+    to {
+        opacity: 1;
+        box-shadow: 
+            #fff -50px -200px 0 2px,
+            #fff 50px -300px 0 7px,
+            #fff 160px -400px 0 5px,
+            #fff 100px -500px 0 3px;
+    }
+
+}
+
+.bubbles {
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    background: #fff;
+    opacity: 0;
+    animation: anim-bubbles 3s infinite linear;
+    box-shadow: 
+        #fff -50px -50px 0 2px,
+        #fff 50px -110px 0 7px,
+        #fff 160px -70px 0 5px,
+        #fff 100px -80px 0 5px;
+}
+
+.button a {
+display:block;
+width:130px;
+line-height:100px;
+text-align: center;
+vertical-align:middle;
+background-color:white;
+color:black;
+text-decoration:none;
+border-radius: 50%;
+opacity:0.6;
+font-family: sans-serif;
+margin-top: 70px;
+cursor: pointer;
+transition-duration: 0.4s;
+}
+
+.button:hover {
+background-color:#83B7EB;
+color: black;
+border-radius: 50%;
+opacity: 1;
+}
+.wrapper h1{
+	font-size: 55px;
+	margin-top: 80px;
+}
